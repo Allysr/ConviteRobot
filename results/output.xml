@@ -1,260 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-28T13:17:58.034091" rpa="false" schemaversion="5">
-<suite id="s1" name="Hello" source="C:\Users\allys\Desktop\Nova pasta\hello.robot">
-<test id="s1-t1" name="Deve enviar o formulário com sucesso" line="7">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-28T13:39:23.953186" rpa="false" schemaversion="5">
+<suite id="s1" name="Formulario" source="C:\Users\allys\Desktop\Nova pasta\tests\formulario.robot">
+<test id="s1-t1" name="Deve enviar o formulário com sucesso" line="8">
+<kw name="Entrar no formulario" owner="base" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-04-28T13:17:59.464198" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\allys\\Desktop\\Nova pasta\\results\\browser\\traces\\57276fe7-f845-427b-812b-9831191a1ba9"}</msg>
-<msg time="2024-04-28T13:18:00.365836" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\allys\\Desktop\\Nova pasta\\results\\browser\\traces\\57276fe7-f845-427b-812b-9831191a1ba9"}</msg>
+<msg time="2024-04-28T13:39:25.295484" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\allys\\Desktop\\Nova pasta\\results\\browser\\traces\\2c483794-9a8c-400a-ab40-3f110b582df5"}</msg>
+<msg time="2024-04-28T13:39:26.105419" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\allys\\Desktop\\Nova pasta\\results\\browser\\traces\\2c483794-9a8c-400a-ab40-3f110b582df5"}</msg>
 <arg>chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-04-28T13:17:59.455205" elapsed="0.912018"/>
+<status status="PASS" start="2024-04-28T13:39:25.295484" elapsed="0.809935"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-04-28T13:18:03.228739" level="INFO">Successfully initialized new page object and opened url: https://tinyurl.com/desafioTesterSGE</msg>
-<msg time="2024-04-28T13:18:03.228739" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2024-04-28T13:39:28.043290" level="INFO">Successfully initialized new page object and opened url: https://tinyurl.com/desafioTesterSGE</msg>
+<msg time="2024-04-28T13:39:28.043290" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://tinyurl.com/desafioTesterSGE</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-04-28T13:18:00.367223" elapsed="2.862890"/>
+<status status="PASS" start="2024-04-28T13:39:26.106603" elapsed="1.936687"/>
 </kw>
 <kw name="Get Title" owner="Browser">
-<msg time="2024-04-28T13:18:03.276888" level="INFO">Title: 'Convite para festa'</msg>
+<msg time="2024-04-28T13:39:28.090482" level="INFO">Title: 'Convite para festa'</msg>
 <arg>==</arg>
 <arg>Convite para festa</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2024-04-28T13:18:03.230113" elapsed="0.046775"/>
+<status status="PASS" start="2024-04-28T13:39:28.044755" elapsed="0.045727"/>
 </kw>
+<status status="PASS" start="2024-04-28T13:39:25.295484" elapsed="2.794998"/>
+</kw>
+<kw name="Preencher nome" owner="preencher-formulario">
 <kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:03.278877" level="INFO">Fills the text 'Your Name Here' in the given field.</msg>
+<msg time="2024-04-28T13:39:28.090482" level="INFO">Fills the text 'Your Name Here' in the given field.</msg>
 <arg>css=form#mG61Hd div:nth-child(1) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
 <arg>Your Name Here</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:03.277887" elapsed="0.549218"/>
+<status status="PASS" start="2024-04-28T13:39:28.090482" elapsed="0.598143"/>
 </kw>
+<status status="PASS" start="2024-04-28T13:39:28.090482" elapsed="0.598143"/>
+</kw>
+<kw name="Preencher sobremesa" owner="preencher-formulario">
 <kw name="Click" owner="Browser">
 <arg>div[role="listbox"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:03.827105" elapsed="0.100477"/>
+<status status="PASS" start="2024-04-28T13:39:28.688625" elapsed="0.322506"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-28T13:18:06.928107" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-04-28T13:39:32.013338" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-28T13:18:03.927582" elapsed="3.000525"/>
+<status status="PASS" start="2024-04-28T13:39:29.012794" elapsed="3.000544"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>css=#mG61Hd &gt; div.RH5hzf.RLS9Fe &gt; div &gt; div.o3Dpx &gt; div:nth-child(2) &gt; div &gt; div &gt; div.vQES8d &gt; div</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:06.928107" elapsed="0.085868"/>
+<status status="PASS" start="2024-04-28T13:39:32.013338" elapsed="0.076858"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-28T13:18:10.015668" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-04-28T13:39:35.090341" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-28T13:18:07.014988" elapsed="3.000680"/>
+<status status="PASS" start="2024-04-28T13:39:32.090196" elapsed="3.000145"/>
 </kw>
+<status status="PASS" start="2024-04-28T13:39:28.688625" elapsed="6.401716"/>
+</kw>
+<kw name="Preencher voce pode participar" owner="preencher-formulario">
 <kw name="Click" owner="Browser">
 <arg>css=div#i13 div.vd3tt &gt; div</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.015668" elapsed="0.092063"/>
+<status status="PASS" start="2024-04-28T13:39:35.090341" elapsed="0.114535"/>
 </kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2024-04-28T13:18:10.247654" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/formulario-complet.png" target="_blank"&gt;&lt;img src="browser/screenshot/formulario-complet.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<arg>filename=formulario-complet</arg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.108978" elapsed="0.138676"/>
+<status status="PASS" start="2024-04-28T13:39:35.090341" elapsed="0.114535"/>
 </kw>
+<kw name="Preencher quantas pessoas comparecerao" owner="preencher-formulario">
 <kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:10.248699" level="INFO">Fills the text '4' in the given field.</msg>
+<msg time="2024-04-28T13:39:35.206173" level="INFO">Fills the text '4' in the given field.</msg>
 <arg>css=form#mG61Hd div:nth-child(4) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
 <arg>4</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.248699" elapsed="0.075000"/>
+<status status="PASS" start="2024-04-28T13:39:35.206173" elapsed="0.191490"/>
 </kw>
+<status status="PASS" start="2024-04-28T13:39:35.206173" elapsed="0.191887"/>
+</kw>
+<kw name="Preencher o que voce vai trazer" owner="preencher-formulario">
 <kw name="Click" owner="Browser">
 <arg>css=div#i28 &gt; div.uHMk6b.fsHoPb</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.323699" elapsed="0.083162"/>
+<status status="PASS" start="2024-04-28T13:39:35.399700" elapsed="0.136705"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>css=div#i34 &gt; div.uHMk6b.fsHoPb</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.408226" elapsed="0.069141"/>
+<status status="PASS" start="2024-04-28T13:39:35.537501" elapsed="0.063172"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>css=div#i37 &gt; div.uHMk6b.fsHoPb</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.478524" elapsed="0.069975"/>
+<status status="PASS" start="2024-04-28T13:39:35.600673" elapsed="0.077719"/>
 </kw>
+<status status="PASS" start="2024-04-28T13:39:35.399596" elapsed="0.278796"/>
+</kw>
+<kw name="Preencher alergia ou restricao" owner="preencher-formulario">
 <kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:10.550696" level="INFO">Fills the text 'Não' in the given field.</msg>
+<msg time="2024-04-28T13:39:35.678392" level="INFO">Fills the text 'Não' in the given field.</msg>
 <arg>css=form#mG61Hd div:nth-child(6) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
 <arg>Não</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.550696" elapsed="0.045498"/>
+<status status="PASS" start="2024-04-28T13:39:35.678392" elapsed="0.081621"/>
 </kw>
+<status status="PASS" start="2024-04-28T13:39:35.678392" elapsed="0.081621"/>
+</kw>
+<kw name="Preencher email" owner="preencher-formulario">
 <kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:10.597849" level="INFO">Fills the text 'teste@teste.com' in the given field.</msg>
+<msg time="2024-04-28T13:39:35.763213" level="INFO">Fills the text 'teste@teste.com' in the given field.</msg>
 <arg>css=form#mG61Hd div:nth-child(7) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
 <arg>teste@teste.com</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.597190" elapsed="0.048746"/>
+<status status="PASS" start="2024-04-28T13:39:35.761383" elapsed="0.066634"/>
 </kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2024-04-28T13:18:10.778492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/formulario-completo.png" target="_blank"&gt;&lt;img src="browser/screenshot/formulario-completo.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<arg>filename=formulario-completo</arg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.646932" elapsed="0.131560"/>
+<status status="PASS" start="2024-04-28T13:39:35.761383" elapsed="0.066634"/>
 </kw>
+<kw name="Clicar no botao enviar" owner="preencher-formulario">
 <kw name="Click" owner="Browser">
 <arg>css=form#mG61Hd div.lRwqcd &gt; div &gt; span &gt; span</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:10.778492" elapsed="0.448150"/>
+<status status="PASS" start="2024-04-28T13:39:35.831630" elapsed="0.467626"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-28T13:18:14.227583" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-28T13:18:11.226642" elapsed="3.000941"/>
+<status status="PASS" start="2024-04-28T13:39:35.828017" elapsed="0.471239"/>
 </kw>
-<status status="PASS" start="2024-04-28T13:17:59.439126" elapsed="14.789989"/>
-</test>
-<test id="s1-t2" name="Deve enviar do formulário apenas com campos obrigatórios" line="38">
-<kw name="New Browser" owner="Browser">
-<msg time="2024-04-28T13:18:14.353527" level="INFO">Switching browser to browser=35600629-94a6-45f0-8639-71cbdd2fea70</msg>
-<msg time="2024-04-28T13:18:14.359699" level="INFO">Successfully changed active browser: browser=35600629-94a6-45f0-8639-71cbdd2fea70</msg>
-<msg time="2024-04-28T13:18:14.360709" level="INFO">Reusing existing browser with id: browser=35600629-94a6-45f0-8639-71cbdd2fea70</msg>
-<arg>chromium</arg>
-<arg>headless=False</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-04-28T13:18:14.351886" elapsed="0.008823"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2024-04-28T13:18:16.132398" level="INFO">Successfully initialized new page object and opened url: https://tinyurl.com/desafioTesterSGE</msg>
-<msg time="2024-04-28T13:18:16.132398" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>https://tinyurl.com/desafioTesterSGE</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2024-04-28T13:18:14.360709" elapsed="1.772728"/>
-</kw>
-<kw name="Get Title" owner="Browser">
-<msg time="2024-04-28T13:18:16.149583" level="INFO">Title: 'Convite para festa'</msg>
-<arg>==</arg>
-<arg>Convite para festa</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.133437" elapsed="0.016146"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:16.151696" level="INFO">Fills the text 'Your Name Here' in the given field.</msg>
-<arg>css=form#mG61Hd div:nth-child(1) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
-<arg>Your Name Here</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.151696" elapsed="0.320540"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>css=div#i13 div.vd3tt &gt; div</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.472236" elapsed="0.091590"/>
-</kw>
+<kw name="Tirar evidencia" owner="base" type="TEARDOWN">
 <kw name="Take Screenshot" owner="Browser">
-<msg time="2024-04-28T13:18:16.713660" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/formulario-complet.png" target="_blank"&gt;&lt;img src="browser/screenshot/formulario-complet.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<arg>filename=formulario-complet</arg>
+<msg time="2024-04-28T13:39:36.633483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>fullPage=True</arg>
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.565491" elapsed="0.149429"/>
+<status status="PASS" start="2024-04-28T13:39:36.300564" elapsed="0.332919"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:16.716414" level="INFO">Fills the text 'Não' in the given field.</msg>
-<arg>css=form#mG61Hd div:nth-child(6) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
-<arg>Não</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.714920" elapsed="0.096527"/>
+<status status="PASS" start="2024-04-28T13:39:36.300564" elapsed="0.332919"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-04-28T13:18:16.813796" level="INFO">Fills the text 'teste@teste.com' in the given field.</msg>
-<arg>css=form#mG61Hd div:nth-child(7) &gt; div &gt; div &gt; div.AgroKb &gt; div &gt; div.aCsJod.oJeWuf &gt; div &gt; div.Xb9hP &gt; input</arg>
-<arg>teste@teste.com</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.812381" elapsed="0.173457"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2024-04-28T13:18:17.104015" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/formulario-completo.png" target="_blank"&gt;&lt;img src="browser/screenshot/formulario-completo.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<arg>filename=formulario-completo</arg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2024-04-28T13:18:16.987369" elapsed="0.117099"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>css=form#mG61Hd div.lRwqcd &gt; div &gt; span &gt; span</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-04-28T13:18:17.104638" elapsed="0.636856"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-28T13:18:20.741841" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-28T13:18:17.741494" elapsed="3.000347"/>
-</kw>
-<status status="PASS" start="2024-04-28T13:18:14.342252" elapsed="6.399589"/>
+<status status="PASS" start="2024-04-28T13:39:25.290804" elapsed="11.356220"/>
 </test>
 <doc>Suite de testes home page</doc>
-<status status="PASS" start="2024-04-28T13:17:58.041176" elapsed="22.827437"/>
+<status status="PASS" start="2024-04-28T13:39:23.953186" elapsed="12.874821"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Hello">Hello</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Formulario">Formulario</stat>
 </suite>
 </statistics>
 <errors>
